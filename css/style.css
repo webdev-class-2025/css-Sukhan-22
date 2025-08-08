@@ -1,1 +1,130 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: rgb(178, 148, 206);
+    color: #2c2c2c;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.menu a {
+    color: #4B0082;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.instlogo {
+    display: flex;
+    padding: 3px;
+    margin-top: 0,8px;
+}
+
+.zagolovka {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.zagolovka img {
+    max-width: 300px;
+    border-radius: 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.card {
+    background-color: #ffffffcc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(73, 204, 200, 0.3);
+    transition: 0.2s ease, box-shadow 0.3 ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #1e1e5a;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #2c2c2c;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #2c2c2c;
+}
+
+/* Adaptive styles for tablets */
+@media(max-width: 768px){
+    .zagolovka {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .grid {
+        gap: 16px;
+    }
+}
+
+/* Adaptive styles for phones */
+@media(max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}
